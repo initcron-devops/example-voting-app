@@ -27,9 +27,15 @@ curl -sS -X POST --data "vote=b" http://vote | grep -i erro
 if [ $? -eq 0 ]
 then
   # error, failed
+  echo "-----------------------------"
+  echo "INTEGRATION TEST FAILED"
+  echo "-----------------------------"
   exit 1
 else
-  # passed 
+  # passed
+  echo "-----------------------------"
+  echo "INTEGRATION TEST PASSED"
+  echo "-----------------------------"
   exit 0
 fi
 
